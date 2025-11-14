@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo: Crescimento e Monetização - Canal Agnus Sound</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .diagnosis {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 30px;
+            margin: 30px;
+            border-radius: 10px;
+        }
+
+        .diagnosis h2 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .diagnosis-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .diagnosis-item h3 {
+            color: #d32f2f;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .diagnosis-item h3::before {
+            content: "⚠️";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .section {
+            padding: 40px;
+        }
+
+        .section h2 {
+            color: #2a5298;
+            font-size: 2em;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .phase {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .phase::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .phase h3 {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .checklist {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .checklist-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .checklist-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            margin-top: 3px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .checklist-item label {
+            cursor: pointer;
+            flex-grow: 1;
+        }
+
+        .checklist-item.completed {
+            opacity: 0.6;
+            text-decoration: line-through;
+        }
+
+        .priority-high {
+            border-left: 4px solid #d32f2f;
+        }
+
+        .priority-medium {
+            border-left: 4px solid #ffa726;
+        }
+
+        .priority-low {
+            border-left: 4px solid #66bb6a;
+        }
+
+        .tips {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .tips h4 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .tips ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .tips li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .tips li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .warning {
+            background: #ffebee;
+            border-left: 5px solid #f44336;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .warning h4 {
+            color: #c62828;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .metric-card h4 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .metric-card .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .metric-card .label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .resource-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        .resource-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .resource-card h4 {
+            color: #2a5298;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .resource-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resource-card a:hover {
+            text-decoration: underline;
+        }
+
+        .progress-tracker {
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .progress-bar {
+            background: #e0e0e0;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin: 40px;
+            border-radius: 15px;
+        }
+
+        .cta h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+        }
+
+        .cta button {
+            background: white;
+            color: #f5576c;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .stat-item strong {
+            color: #2a5298;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .keyword-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Plano de Crescimento e Monetização</h1>
+            <p>Canal Agnus Sound - Música Instrumental Worship</p>
+        </header>
+
+        <div class="diagnosis">
+            <h2>🔍 Diagnóstico Inicial</h2>
+
+            <div class="diagnosis-item">
+                <h3>Problema: Baixa Visibilidade (1 visualização em 3 horas)</h3>
+                <p><strong>Causas Prováveis:</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Canal sem SEO otimizado (título, descrição, tags)</li>
+                    <li>Falta de promoção inicial do vídeo</li>
+                    <li>Ausência de thumbnails atraentes</li>
+                    <li>Nicho competitivo sem diferenciação clara</li>
+                    <li>Canal novo sem histórico ou autoridade</li>
+                    <li>Nenhuma comunidade ou audiência inicial</li>
+                </ul>
+            </div>
+
+            <div class="diagnosis-item">
+                <h3>Desafio: Monetização YouTube</h3>
+                <p><strong>Requisitos para o Programa de Parcerias do YouTube (YPP):</strong></p>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <strong>1.000 inscritos</strong>
+                        <span>Necessário construir comunidade</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>4.000 horas</strong>
+                        <span>De Watch Time nos últimos 12 meses</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>OU 10 milhões</strong>
+                        <span>De visualizações em Shorts (90 dias)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="diagnosis-item">
+                <h3>Oportunidade: Nicho de Música Worship Instrumental</h3>
+                <p><strong>Pontos Positivos:</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>✅ Nicho específico com audiência dedicada</li>
+                    <li>✅ Conteúdo evergreen (sempre relevante)</li>
+                    <li>✅ Possibilidade de múltiplas fontes de receita</li>
+                    <li>✅ Baixa necessidade de equipamentos caros</li>
+                    <li>✅ Conteúdo pode ser usado para estudo, meditação, trabalho</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="metrics">
+            <div class="metric-card">
+                <h4>Meta de Inscritos</h4>
+                <div class="value">1.000</div>
+                <div class="label">Primeira grande meta</div>
+            </div>
+            <div class="metric-card">
+                <h4>Horas de Visualização</h4>
+                <div class="value">4.000h</div>
+                <div class="label">Últimos 12 meses</div>
+            </div>
+            <div class="metric-card">
+                <h4>Prazo Estimado</h4>
+                <div class="value">6-12</div>
+                <div class="label">Meses (com esforço consistente)</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 Plano de Ação Completo</h2>
+
+            <div class="timeline">
+                <div class="phase">
+                    <h3>FASE 1: Fundação e Otimização (Semanas 1-2)</h3>
+
+                    <div class="checklist">
+                        <h4>✅ Otimização do Canal</h4>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task1">
+                            <label for="task1">
+                                <strong>Criar identidade visual profissional</strong><br>
+                                - Logo do canal (use Canva gratuito)<br>
+                                - Banner otimizado (2560x1440px)<br>
+                                - Watermark para vídeos<br>
+                                <em>Prazo: 2 dias</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task2">
+                            <label for="task2">
+                                <strong>Otimizar descrição do canal</strong><br>
+                                - Incluir palavras-chave: "música worship instrumental", "louvor instrumental", "adoração instrumental"<br>
+                                - Descrever propósito do canal<br>
+                                - Adicionar links (redes sociais, contato)<br>
+                                <em>Prazo: 1 dia</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task3">
+                            <label for="task3">
+                                <strong>Configurar seções do canal</strong><br>
+                                - Criar playlists temáticas<br>
+                                - Organizar vídeos por categoria<br>
+                                - Destacar vídeo de apresentação<br>
+                                <em>Prazo: 1 dia</em>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checklist">
+                        <h4>✅ Otimização de Vídeos (SEO)</h4>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task4">
+                            <label for="task4">
+                                <strong>Revisar título do vídeo atual</strong><br>
+                                Fórmula ideal: [Emoção/Benefício] + [Palavra-chave Principal] + [Diferenciação]<br>
+                                Exemplo: "Música Worship Instrumental para Oração e Meditação | 1 Hora de Louvor Suave ao Piano"<br>
+                                <em>Prazo: Imediato</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task5">
+                            <label for="task5">
+                                <strong>Criar thumbnail atraente</strong><br>
+                                - Usar imagens de alta qualidade (1280x720px)<br>
+                                - Incluir texto grande e legível (máx 3-4 palavras)<br>
+                                - Cores contrastantes<br>
+                                - Elemento visual relacionado a worship/fé<br>
+                                <em>Prazo: Imediato - Ferramentas: Canva, Photopea</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task6">
+                            <label for="task6">
+                                <strong>Escrever descrição completa</strong><br>
+                                - Primeiras 2 linhas: descrição atrativa (aparecem antes de "mostrar mais")<br>
+                                - Incluir todas as palavras-chave relevantes naturalmente<br>
+                                - Adicionar timestamps se o vídeo for longo<br>
+                                - Call-to-action (pedir inscrição, like, comentário)<br>
+                                - Links para outras redes e playlists<br>
+                                <em>Prazo: Imediato</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task7">
+                            <label for="task7">
+                                <strong>Adicionar tags estratégicas (15-20 tags)</strong><br>
+                                Mix de tags específicas e amplas:<br>
+                                - Específicas: "música worship instrumental piano", "louvor instrumental suave"<br>
+                                - Médias: "música cristã instrumental", "adoração instrumental"<br>
+                                - Amplas: "música relaxante", "música para orar"<br>
+                                <em>Prazo: Imediato</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task8">
+                            <label for="task8">
+                                <strong>Adicionar legendas/closed captions</strong><br>
+                                - Melhora acessibilidade<br>
+                                - YouTube indexa texto das legendas para SEO<br>
+                                <em>Prazo: 2 dias</em>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="tips">
+                        <h4>💡 Dicas de Palavras-Chave para Pesquisar</h4>
+                        <ul>
+                            <li>Use o YouTube Search para autocompletar e ver sugestões</li>
+                            <li>Ferramentas gratuitas: TubeBuddy, VidIQ (versão free)</li>
+                            <li>Analise concorrentes bem-sucedidos no nicho</li>
+                            <li>Foque em "long-tail keywords" (frases longas e específicas)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="phase">
+                    <h3>FASE 2: Produção de Conteúdo Estratégico (Semanas 3-8)</h3>
+
+                    <div class="checklist">
+                        <h4>✅ Estratégia de Upload</h4>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task9">
+                            <label for="task9">
+                                <strong>Estabelecer calendário de publicação</strong><br>
+                                - MÍNIMO: 2-3 vídeos por semana<br>
+                                - IDEAL: 1 vídeo por dia (ou 5-7 por semana)<br>
+                                - Manter consistência de horário (ex: sempre às 18h)<br>
+                                - Melhores dias: Terça, Quinta, Domingo<br>
+                                <em>Prazo: Definir hoje e iniciar semana que vem</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task10">
+                            <label for="task10">
+                                <strong>Criar banco de conteúdo (pelo menos 20 vídeos)</strong><br>
+                                Diversificar formatos:<br>
+                                - Vídeos longos (1h+): para watch time<br>
+                                - Vídeos médios (20-30min): equilíbrio<br>
+                                - Shorts (15-60s): alcance rápido<br>
+                                <em>Prazo: 3 semanas</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task11">
+                            <label for="task11">
+                                <strong>Produzir YouTube Shorts diariamente</strong><br>
+                                - Extrair trechos de 30-60s dos vídeos longos<br>
+                                - Usar formato vertical (9:16)<br>
+                                - Adicionar texto/legendas para chamar atenção<br>
+                                - Objetivo: 10 milhões de views em 90 dias = monetização alternativa<br>
+                                <em>Prazo: Começar imediatamente, meta 1-3 shorts/dia</em>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checklist">
+                        <h4>✅ Ideias de Conteúdo Específicas</h4>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task12">
+                            <label for="task12">
+                                <strong>Séries temáticas</strong><br>
+                                - "Adoração ao Piano - Vol. 1, 2, 3..."<br>
+                                - "Música para Oração Matinal"<br>
+                                - "Instrumental para Culto em Casa"<br>
+                                - "Meditação nas Escrituras" (com versículos)<br>
+                                <em>Criar 4 séries diferentes</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task13">
+                            <label for="task13">
+                                <strong>Vídeos para ocasiões específicas</strong><br>
+                                - Natal, Páscoa, Ano Novo<br>
+                                - Domingo de Adoração<br>
+                                - Sexta-feira Santa<br>
+                                <em>Planejar com antecedência (1-2 meses antes)</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task14">
+                            <label for="task14">
+                                <strong>Compilações e remixes</strong><br>
+                                - "3 Horas de Música Worship Contínua"<br>
+                                - "Best of Agnus Sound"<br>
+                                - "Mix para Estudo com Música Cristã"<br>
+                                <em>Criar 1 compilação por semana</em>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="warning">
+                        <h4>⚠️ ATENÇÃO: Direitos Autorais e Suno AI</h4>
+                        <p><strong>Pontos Críticos:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Verifique os termos de uso do Suno AI para monetização</li>
+                            <li>Músicas geradas por IA podem ter restrições de copyright</li>
+                            <li>YouTube pode desmonetizar conteúdo não-original</li>
+                            <li><strong>Solução:</strong> Use plano pago do Suno AI (se aplicável) ou considere criar composições originais</li>
+                            <li>Sempre declare no vídeo se usa IA na produção (transparência)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="phase">
+                    <h3>FASE 3: Promoção e Alcance (Semanas 3-12)</h3>
+
+                    <div class="checklist">
+                        <h4>✅ Marketing Externo</h4>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task15">
+                            <label for="task15">
+                                <strong>Criar perfis em redes sociais</strong><br>
+                                - Instagram: posts e reels diários<br>
+                                - TikTok: vídeos curtos (mesmos que Shorts)<br>
+                                - Facebook: grupos de música cristã<br>
+                                - Pinterest: boards de música worship<br>
+                                <em>Prazo: 1 semana - Sempre linkando para o YouTube</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task16">
+                            <label for="task16">
+                                <strong>Engajar em comunidades relevantes</strong><br>
+                                - Comentar em vídeos similares (SEM SPAM)<br>
+                                - Participar de fóruns cristãos<br>
+                                - Reddit: r/christianmusic, r/WorshipMusic<br>
+                                - Grupos do Facebook de igrejas e música gospel<br>
+                                <em>Prazo: Atividade diária (15-30min/dia)</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task17">
+                            <label for="task17">
+                                <strong>Parcerias com micro-influenciadores</strong><br>
+                                - Contatar canais menores (1k-10k inscritos) no mesmo nicho<br>
+                                - Propor colaborações ou menções mútuas<br>
+                                - Oferecer música para uso em vídeos deles (com crédito)<br>
+                                <em>Prazo: Contatar 10 canais/semana</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task18">
+                            <label for="task18">
+                                <strong>Distribuir em plataformas de streaming</strong><br>
+                                - Spotify, Apple Music, Deezer (via DistroKid, TuneCore, CD Baby)<br>
+                                - Adicionar link para YouTube na bio<br>
+                                - Criar playlists colaborativas<br>
+                                <em>Prazo: 2 semanas</em>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checklist">
+                        <h4>✅ Engajamento no YouTube</h4>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task19">
+                            <label for="task19">
+                                <strong>Responder TODOS os comentários</strong><br>
+                                - Primeiras 1-2 horas após upload são críticas<br>
+                                - Fazer perguntas para incentivar respostas<br>
+                                - Fixar comentário com call-to-action<br>
+                                <em>Prazo: Diariamente</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task20">
+                            <label for="task20">
+                                <strong>Usar Community Tab (quando disponível)</strong><br>
+                                - Enquetes sobre próximos vídeos<br>
+                                - Compartilhar versículos ou mensagens inspiradoras<br>
+                                - Anunciar novos uploads<br>
+                                <em>Prazo: 2-3 posts por semana (quando atingir 1k inscritos)</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task21">
+                            <label for="task21">
+                                <strong>Criar vídeo de boas-vindas para inscritos</strong><br>
+                                - Explicar propósito do canal<br>
+                                - Agradecer inscrição<br>
+                                - Pedir para ativar notificações<br>
+                                <em>Prazo: 1 semana</em>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="tips">
+                        <h4>💡 Estratégias de Viralização</h4>
+                        <ul>
+                            <li><strong>Momento viral:</strong> Poste conteúdo relacionado a eventos atuais (festividades, tendências cristãs)</li>
+                            <li><strong>Colaborações:</strong> Convide vocalistas para gravar sobre seus instrumentais</li>
+                            <li><strong>Behind the scenes:</strong> Mostre processo de criação (humaniza o canal dark)</li>
+                            <li><strong>Challenges:</strong> Crie desafios de adoração (#30DaysOfWorship)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="phase">
+                    <h3>FASE 4: Análise e Otimização (Semanas 8-16)</h3>
+
+                    <div class="checklist">
+                        <h4>✅ Métricas e Analytics</h4>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task22">
+                            <label for="task22">
+                                <strong>Análise semanal do YouTube Analytics</strong><br>
+                                Focar em:<br>
+                                - CTR (Click-Through Rate): meta acima de 4%<br>
+                                - Retenção de audiência: primeiros 30 segundos cruciais<br>
+                                - Fontes de tráfego: de onde vêm as views<br>
+                                - Demografia: idade, gênero, localização<br>
+                                <em>Prazo: Toda segunda-feira</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task23">
+                            <label for="task23">
+                                <strong>Testes A/B de thumbnails e títulos</strong><br>
+                                - Criar 2-3 versões diferentes<br>
+                                - Trocar após 48-72h se performance baixa<br>
+                                - Documentar o que funciona melhor<br>
+                                <em>Prazo: A cada novo vídeo</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task24">
+                            <label for="task24">
+                                <strong>Estudar concorrência</strong><br>
+                                - Identificar 10 canais de sucesso no nicho<br>
+                                - Analisar seus vídeos mais populares<br>
+                                - Adaptar estratégias (sem copiar)<br>
+                                <em>Prazo: Análise mensal</em>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checklist">
+                        <h4>✅ Otimizações Contínuas</h4>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task25">
+                            <label for="task25">
+                                <strong>Atualizar vídeos antigos</strong><br>
+                                - Melhorar SEO de vídeos com baixa performance<br>
+                                - Adicionar cards e end screens<br>
+                                - Criar playlists estratégicas<br>
+                                <em>Prazo: Revisão mensal</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task26">
+                            <label for="task26">
+                                <strong>Repostar conteúdo em diferentes formatos</strong><br>
+                                - Transformar vídeo longo em vários Shorts<br>
+                                - Criar versões "sem anúncios" para membros<br>
+                                - Editar compilações temáticas<br>
+                                <em>Prazo: Semanalmente</em>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase">
+                    <h3>FASE 5: Preparação para Monetização (Meses 4-6)</h3>
+
+                    <div class="checklist">
+                        <h4>✅ Cumprimento de Requisitos</h4>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task27">
+                            <label for="task27">
+                                <strong>Verificar elegibilidade do canal</strong><br>
+                                - Cumprir políticas de conteúdo do YouTube<br>
+                                - Sem strikes de direitos autorais<br>
+                                - Seguir diretrizes da comunidade<br>
+                                - Ter conta AdSense configurada<br>
+                                <em>Prazo: Revisar mensalmente</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task28">
+                            <label for="task28">
+                                <strong>Acompanhar progresso de métricas YPP</strong><br>
+                                Metas intermediárias sugeridas:<br>
+                                - Mês 1: 100 inscritos<br>
+                                - Mês 2: 250 inscritos<br>
+                                - Mês 3: 500 inscritos<br>
+                                - Mês 4-6: 1.000 inscritos<br>
+                                <em>Prazo: Verificação diária no YouTube Studio</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task29">
+                            <label for="task29">
+                                <strong>Preparar diversificação de receita</strong><br>
+                                - Pesquisar sobre Super Thanks, Membros do Canal<br>
+                                - Criar produtos digitais (partituras, pacotes de áudio)<br>
+                                - Considerar Patreon ou apoia.se<br>
+                                <em>Prazo: Planejar a partir de 500 inscritos</em>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checklist">
+                        <h4>✅ Aplicação ao YPP</h4>
+
+                        <div class="checklist-item priority-high">
+                            <input type="checkbox" id="task30">
+                            <label for="task30">
+                                <strong>Aplicar ao Programa de Parcerias</strong><br>
+                                - Acessar YouTube Studio → Monetização<br>
+                                - Aceitar termos do YPP<br>
+                                - Conectar conta Google AdSense<br>
+                                - Aguardar revisão (pode levar 1 mês)<br>
+                                <em>Prazo: Assim que atingir requisitos</em>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase">
+                    <h3>FASE 6: Crescimento Sustentável (Mês 6+)</h3>
+
+                    <div class="checklist">
+                        <h4>✅ Expansão e Escala</h4>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task31">
+                            <label for="task31">
+                                <strong>Investir em equipamentos e software</strong><br>
+                                - Melhorar qualidade de áudio<br>
+                                - Software de edição profissional<br>
+                                - Instrumentos virtuais premium<br>
+                                <em>Prazo: Após primeiros ganhos</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-medium">
+                            <input type="checkbox" id="task32">
+                            <label for="task32">
+                                <strong>Criar conteúdo premium</strong><br>
+                                - Membros do canal: acesso antecipado, versões estendidas<br>
+                                - Vídeos exclusivos<br>
+                                - Lives de adoração ao vivo<br>
+                                <em>Prazo: Após monetização</em>
+                            </label>
+                        </div>
+
+                        <div class="checklist-item priority-low">
+                            <input type="checkbox" id="task33">
+                            <label for="task33">
+                                <strong>Explorar outras plataformas</strong><br>
+                                - Twitch para lives<br>
+                                - Podcast em áudio<br>
+                                - Cursos online sobre produção musical cristã<br>
+                                <em>Prazo: Após estabilização no YouTube</em>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Palavras-Chave Estratégicas para Seu Nicho</h2>
+
+            <div class="keyword-tags">
+                <span class="tag">música worship instrumental</span>
+                <span class="tag">louvor instrumental</span>
+                <span class="tag">adoração instrumental</span>
+                <span class="tag">música para oração</span>
+                <span class="tag">música cristã instrumental</span>
+                <span class="tag">instrumental gospel</span>
+                <span class="tag">música para meditação cristã</span>
+                <span class="tag">soaking music</span>
+                <span class="tag">música de fundo para culto</span>
+                <span class="tag">instrumental para igreja</span>
+                <span class="tag">piano worship</span>
+                <span class="tag">música instrumental evangélica</span>
+                <span class="tag">adoração espontânea instrumental</span>
+                <span class="tag">música para vigília</span>
+                <span class="tag">instrumental para jejum e oração</span>
+            </div>
+
+            <div class="tips">
+                <h4>💡 Como Usar Essas Palavras-Chave</h4>
+                <ul>
+                    <li>Incluir naturalmente em títulos (não stuffing)</li>
+                    <li>Usar variações nas descrições</li>
+                    <li>Adicionar como tags principais</li>
+                    <li>Criar vídeos específicos para cada termo de alta busca</li>
+                    <li>Pesquisar volume de busca com TubeBuddy ou VidIQ</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 KPIs para Acompanhar (Semanalmente)</h2>
+
+            <div class="resources">
+                <div class="resource-card">
+                    <h4>📈 Crescimento</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>Novos inscritos</li>
+                        <li>Total de visualizações</li>
+                        <li>Horas de Watch Time acumuladas</li>
+                        <li>Taxa de crescimento (%)</li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h4>🎯 Engajamento</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>CTR médio (meta: 4-10%)</li>
+                        <li>Retenção média (meta: 50%+)</li>
+                        <li>Likes por vídeo</li>
+                        <li>Comentários e respostas</li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h4>🔍 Descoberta</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>Impressões totais</li>
+                        <li>Fontes de tráfego principais</li>
+                        <li>Pesquisas do YouTube</li>
+                        <li>Vídeos sugeridos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Ferramentas Essenciais (Gratuitas e Pagas)</h2>
+
+            <div class="resources">
+                <div class="resource-card">
+                    <h4>🎨 Design</h4>
+                    <p><strong>Canva</strong> (gratuito) - Thumbnails, banners</p>
+                    <p><strong>Photopea</strong> (gratuito) - Edição de imagens avançada</p>
+                    <p><strong>Remove.bg</strong> (gratuito) - Remover fundos</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>🎵 Produção Musical</h4>
+                    <p><strong>Suno AI</strong> - Geração de música (verificar licença)</p>
+                    <p><strong>Audacity</strong> (gratuito) - Edição de áudio</p>
+                    <p><strong>FL Studio / Ableton</strong> (pago) - DAW profissional</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>🎬 Edição de Vídeo</h4>
+                    <p><strong>DaVinci Resolve</strong> (gratuito) - Edição profissional</p>
+                    <p><strong>CapCut</strong> (gratuito) - Rápido e simples</p>
+                    <p><strong>Adobe Premiere</strong> (pago) - Nível profissional</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>📊 SEO e Analytics</h4>
+                    <p><strong>TubeBuddy</strong> (free + pago) - Pesquisa de palavras-chave</p>
+                    <p><strong>VidIQ</strong> (free + pago) - Análise de concorrentes</p>
+                    <p><strong>YouTube Studio</strong> (gratuito) - Analytics oficial</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>📱 Gestão de Redes Sociais</h4>
+                    <p><strong>Buffer</strong> (free + pago) - Agendamento</p>
+                    <p><strong>Later</strong> (free + pago) - Instagram e TikTok</p>
+                    <p><strong>Hootsuite</strong> (pago) - Completo</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>🎼 Bibliotecas de Áudio</h4>
+                    <p><strong>YouTube Audio Library</strong> (gratuito)</p>
+                    <p><strong>Epidemic Sound</strong> (pago) - Profissional</p>
+                    <p><strong>Artlist</strong> (pago) - Alta qualidade</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>⚠️ Erros Comuns a Evitar</h2>
+
+            <div class="warning">
+                <h4>❌ NÃO FAÇA:</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Comprar inscritos ou views:</strong> Viola termos do YouTube, pode banir o canal</li>
+                    <li><strong>Spam de links:</strong> Compartilhar excessivamente em grupos sem permissão</li>
+                    <li><strong>Clickbait enganoso:</strong> Thumbnails/títulos que não refletem o conteúdo</li>
+                    <li><strong>Sub4Sub (inscrição mútua):</strong> Gera inscritos inativos, prejudica algoritmo</li>
+                    <li><strong>Copiar conteúdo:</strong> Reuploads ou cópias diretas de outros canais</li>
+                    <li><strong>Ignorar analytics:</strong> Não analisar dados é desperdiçar oportunidades</li>
+                    <li><strong>Inconsistência:</strong> Ficar semanas sem postar quebra momentum</li>
+                    <li><strong>Baixa qualidade de áudio:</strong> Em música, áudio ruim é fatal</li>
+                </ul>
+            </div>
+
+            <div class="tips">
+                <h4>✅ FAÇA:</h4>
+                <ul>
+                    <li>Foque em criar valor genuíno para a audiência</li>
+                    <li>Seja paciente - crescimento orgânico leva tempo</li>
+                    <li>Estude continuamente sobre YouTube e marketing</li>
+                    <li>Adapte estratégias baseado em dados, não suposições</li>
+                    <li>Construa comunidade real, não apenas números</li>
+                    <li>Mantenha qualidade consistente acima de quantidade</li>
+                    <li>Respeite direitos autorais rigorosamente</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📚 Recursos de Aprendizado</h2>
+
+            <div class="resources">
+                <div class="resource-card">
+                    <h4>🎓 Cursos e Tutoriais</h4>
+                    <p><strong>YouTube Creator Academy</strong> - Oficial e gratuito</p>
+                    <p><strong>Think Media</strong> - Canal sobre crescimento no YouTube</p>
+                    <p><strong>Roberto Blake</strong> - Estratégias de branding</p>
+                    <p><strong>VidSummit</strong> - Conferências e workshops</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>📖 Documentação</h4>
+                    <p><strong>YouTube Help Center</strong> - Suporte oficial</p>
+                    <p><strong>Google AdSense Help</strong> - Monetização</p>
+                    <p><strong>Políticas do YouTube</strong> - Diretrizes</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>👥 Comunidades</h4>
+                    <p><strong>Reddit r/NewTubers</strong> - Iniciantes</p>
+                    <p><strong>Grupos Facebook</strong> - YouTubers Brasil</p>
+                    <p><strong>Discord</strong> - Servidores de criadores</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💰 Fontes de Receita Além do AdSense</h2>
+
+            <div class="resources">
+                <div class="resource-card">
+                    <h4>1. Membros do Canal</h4>
+                    <p>Benefícios exclusivos para apoiadores mensais</p>
+                    <p><strong>Requisito:</strong> 1.000+ inscritos</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>2. Super Thanks</h4>
+                    <p>Gorjetas dos espectadores em vídeos</p>
+                    <p><strong>Requisito:</strong> Canal monetizado</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>3. Spotify/Streaming</h4>
+                    <p>Royalties por plays em plataformas</p>
+                    <p><strong>Receita:</strong> $0.003-$0.005 por stream</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>4. Licenciamento de Música</h4>
+                    <p>Vender uso de suas composições</p>
+                    <p><strong>Plataformas:</strong> Pond5, AudioJungle</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>5. Produtos Digitais</h4>
+                    <p>Partituras, samples, presets, cursos</p>
+                    <p><strong>Plataformas:</strong> Gumroad, Hotmart</p>
+                </div>
+
+                <div class="resource-card">
+                    <h4>6. Patrocínios</h4>
+                    <p>Marcas de instrumentos, software musical</p>
+                    <p><strong>Requisito:</strong> Audiência engajada</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h3>🚀 Pronto para Começar?</h3>
+            <p>Este é um plano completo, mas o sucesso depende de EXECUÇÃO CONSISTENTE.</p>
+            <p><strong>Primeira ação:</strong> Nos próximos 24 horas, otimize seu vídeo atual (thumbnail, título, descrição, tags).</p>
+            <button onclick="window.print()">📋 Imprimir Plano Completo</button>
+        </div>
+
+        <div class="section">
+            <h2>📅 Resumo de Prazos</h2>
+
+            <div class="progress-tracker">
+                <h3>Linha do Tempo Esperada</h3>
+
+                <div style="margin: 20px 0;">
+                    <strong>Semana 1-2:</strong> Otimização completa do canal e vídeos<br>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 10%;">10%</div>
+                    </div>
+                </div>
+
+                <div style="margin: 20px 0;">
+                    <strong>Mês 1:</strong> 100 inscritos + 10-20 vídeos publicados<br>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 25%;">25%</div>
+                    </div>
+                </div>
+
+                <div style="margin: 20px 0;">
+                    <strong>Mês 3:</strong> 500 inscritos + 50-60 vídeos totais<br>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 50%;">50%</div>
+                    </div>
+                </div>
+
+                <div style="margin: 20px 0;">
+                    <strong>Mês 6:</strong> 1.000 inscritos + 4.000h watch time<br>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+
+                <div style="margin: 20px 0;">
+                    <strong>Mês 7-8:</strong> CANAL MONETIZADO 🎉<br>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%;">100%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning">
+                <h4>⏰ Realidade do Crescimento</h4>
+                <p>Estes prazos são AGRESSIVOS mas alcançáveis com:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>✅ Upload consistente (5-7 vídeos/semana + Shorts diários)</li>
+                    <li>✅ SEO impecável em todos os vídeos</li>
+                    <li>✅ Promoção ativa em todas as plataformas</li>
+                    <li>✅ Engajamento constante com audiência</li>
+                    <li>✅ Análise e otimização semanal</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Sem esforço consistente, pode levar 12-24 meses ou mais.</strong></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Sua Próxima Ação (Nas Próximas 2 Horas)</h2>
+
+            <div class="checklist">
+                <div class="checklist-item priority-high">
+                    <input type="checkbox" id="immediate1">
+                    <label for="immediate1">
+                        <strong>1. Criar thumbnail profissional no Canva</strong> (30 min)
+                    </label>
+                </div>
+
+                <div class="checklist-item priority-high">
+                    <input type="checkbox" id="immediate2">
+                    <label for="immediate2">
+                        <strong>2. Reescrever título do vídeo com palavras-chave</strong> (10 min)
+                    </label>
+                </div>
+
+                <div class="checklist-item priority-high">
+                    <input type="checkbox" id="immediate3">
+                    <label for="immediate3">
+                        <strong>3. Escrever descrição completa (200+ palavras)</strong> (20 min)
+                    </label>
+                </div>
+
+                <div class="checklist-item priority-high">
+                    <input type="checkbox" id="immediate4">
+                    <label for="immediate4">
+                        <strong>4. Adicionar 15-20 tags relevantes</strong> (10 min)
+                    </label>
+                </div>
+
+                <div class="checklist-item priority-high">
+                    <input type="checkbox" id="immediate5">
+                    <label for="immediate5">
+                        <strong>5. Compartilhar em 3 redes sociais diferentes</strong> (20 min)
+                    </label>
+                </div>
+
+                <div class="checklist-item priority-high">
+                    <input type="checkbox" id="immediate6">
+                    <label for="immediate6">
+                        <strong>6. Criar calendário de upload para próximas 2 semanas</strong> (30 min)
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>📧 Contato e Suporte:</strong> Para dúvidas sobre este plano, consulte YouTube Creator Academy ou comunidades de criadores.</p>
+            <p style="margin-top: 10px;">🙏 <strong>Versículo motivacional:</strong> "Tudo posso naquele que me fortalece." - Filipenses 4:13</p>
+            <p style="margin-top: 20px; opacity: 0.8;">© 2025 Agnus Sound Growth Plan | Criado para ajudar seu canal a crescer</p>
+        </footer>
+    </div>
+
+    <script>
+        // Funcionalidade de checkbox para marcar itens completos
+        document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const item = this.closest('.checklist-item');
+                if (this.checked) {
+                    item.classList.add('completed');
+                } else {
+                    item.classList.remove('completed');
+                }
+                updateProgress();
+            });
+        });
+
+        // Calcular progresso geral
+        function updateProgress() {
+            const totalTasks = document.querySelectorAll('.checklist-item input[type="checkbox"]').length;
+            const completedTasks = document.querySelectorAll('.checklist-item input[type="checkbox"]:checked').length;
+            const progressPercentage = Math.round((completedTasks / totalTasks) * 100);
+
+            console.log(`Progresso: ${completedTasks}/${totalTasks} tarefas concluídas (${progressPercentage}%)`);
+        }
+
+        // Salvar progresso no localStorage
+        function saveProgress() {
+            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+            const progress = {};
+            checkboxes.forEach((checkbox, index) => {
+                progress[index] = checkbox.checked;
+            });
+            localStorage.setItem('agnusSoundProgress', JSON.stringify(progress));
+        }
+
+        // Carregar progresso do localStorage
+        function loadProgress() {
+            const savedProgress = localStorage.getItem('agnusSoundProgress');
+            if (savedProgress) {
+                const progress = JSON.parse(savedProgress);
+                const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+                checkboxes.forEach((checkbox, index) => {
+                    if (progress[index]) {
+                        checkbox.checked = true;
+                        checkbox.closest('.checklist-item').classList.add('completed');
+                    }
+                });
+            }
+        }
+
+        // Event listeners para salvar progresso
+        document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', saveProgress);
+        });
+
+        // Carregar progresso ao iniciar
+        loadProgress();
+
+        // Animação de scroll suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Adicionar funcionalidade ao botão CTA
+        document.querySelector('.cta button').addEventListener('click', function() {
+            if (!confirm('Deseja realmente imprimir o plano completo?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
